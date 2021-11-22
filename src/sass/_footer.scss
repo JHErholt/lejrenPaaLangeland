@@ -1,12 +1,6 @@
 footer{
     @extend .center;
     width: 60%;
-    hr{
-        height: 5px;
-        color: $clr-secondary;
-        background-color: $clr-secondary;
-        border-color: $clr-secondary;
-    }
     p{
         font-weight: 700;
         font-size: $font-size-300;

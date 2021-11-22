@@ -1,3 +1,10 @@
+
+hr{
+    height: 5px;
+    color: $clr-secondary;
+    background-color: $clr-secondary;
+    border-color: $clr-secondary;
+}
 .flex-group{
     display: flex;
 }

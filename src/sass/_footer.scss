@@ -1,0 +1,25 @@
+footer{
+    @extend .center;
+    width: 60%;
+    hr{
+        height: 5px;
+        color: $clr-secondary;
+        background-color: $clr-secondary;
+        border-color: $clr-secondary;
+    }
+    p{
+        font-weight: 700;
+        font-size: $font-size-300;
+        font-family: 'Spartan', sans-serif;
+    }
+}
+.footer-flex__item-1, .footer-flex__item-2{
+    padding: $offset-large;
+    width: 50%;
+}
+.footer-flex__item-1{
+    text-align: left;
+}
+.footer-flex__item-2{
+    text-align: right;
+}

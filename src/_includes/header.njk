@@ -1,5 +1,10 @@
 <header>
-    <div class="flex-group">
+    <div class="burger-menu" onclick="toggleMenuIcon(this)">
+        <div class="burger-menu__bar1"></div>
+        <div class="burger-menu__bar2"></div>
+        <div class="burger-menu__bar3"></div>
+    </div>
+    <div class="flex-group menu" id="menu">
         <div>
             <a href="/">
                 <div class="flex-group vertical-center">
@@ -9,12 +14,33 @@
             </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="/about">Om os</a></li>
-                <li><a href="/thanks">Vi takker</a></li>
-                <li><a href="/sponsor">Bliv en sponsor</a></li>
-            </ul>
+            <a href="/about">Om os</a>
+            <a href="/thanks">Vi takker</a>
+            <a class="header-link__button" href="/sponsor">Bliv en sponsor</a>
         </nav>
     </div>
     <hr>
 </header>
+
+<script>
+// toggle Burger menu   
+    function toggleMenuIcon(x) {
+        x.style.transtiton = '0.4s';
+        x.classList.toggle("toggle-menu");
+        document.querySelector("#menu").classList.toggle("visible");
+    }   
+// Page Finder
+    switch (window.location.pathname) {
+        case ('/'):
+        break;
+        case ('/about/'):
+        document.querySelector('a[href="/about"]').style.color = '#d0000b'
+        break;
+        case ('/thanks/'):
+        document.querySelector('a[href="/thanks"]').style.color = '#d0000b'
+        break;
+        case ('/sponsor/'):
+
+        break;
+    }
+</script>

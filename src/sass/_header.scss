@@ -1,5 +1,17 @@
 header{
     
+    a {
+        p {
+            align-items: center;
+            color: $clr-primary;
+            font-size: $font-size-700;
+            font-family: $font-family-heading;
+        }
+        &:hover{
+            transition: .3s;
+            color: $clr-primary;   
+        }
+    }
     img{
         height: 10vh;
     }

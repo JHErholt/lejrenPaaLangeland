@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body, body{
+body, main{
     min-height: 70vh;
+}
+body{
+    font-family: $font-family-text;
 }
 img, iframe, video{
     max-width: 100%;

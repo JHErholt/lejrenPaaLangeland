@@ -7,40 +7,17 @@
     <div class="flex-group menu" id="menu">
         <div>
             <a href="/">
-                <div class="flex-group vertical-center">
+                <div class="flex-group vertical-center logo-container">
                     <img src="/assets/logo.png" alt="">
                     <p>Børnelejren på Langeland</p>
                 </div>
             </a>
         </div>
         <nav>
-            <a href="/about">Om os</a>
-            <a href="/thanks">Vi takker</a>
+            <a class="header-link" href="/about">Om os</a>
+            <a class="header-link" href="/thanks">Vi takker</a>
             <a class="header-link__button" href="/sponsor">Bliv en sponsor</a>
         </nav>
     </div>
     <hr>
 </header>
-
-<script>
-// toggle Burger menu   
-    function toggleMenuIcon(x) {
-        x.style.transtiton = '0.4s';
-        x.classList.toggle("toggle-menu");
-        document.querySelector("#menu").classList.toggle("visible");
-    }   
-// Page Finder
-    switch (window.location.pathname) {
-        case ('/'):
-        break;
-        case ('/about/'):
-        document.querySelector('a[href="/about"]').style.color = '#d0000b'
-        break;
-        case ('/thanks/'):
-        document.querySelector('a[href="/thanks"]').style.color = '#d0000b'
-        break;
-        case ('/sponsor/'):
-
-        break;
-    }
-</script>

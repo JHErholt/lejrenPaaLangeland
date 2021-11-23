@@ -19,3 +19,6 @@ hr{
     display: flex !important;
     flex-direction: column;
 }
+.activated{
+    background-color: darken($clr-neutral, 5);
+}

@@ -1,7 +1,12 @@
+// Header
 header{
-    
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    opacity: 0.99;
+    z-index: 999;
     a {
-        font-size: $font-size-200;
+        font-size: $font-size-400;
         color: $clr-secondary;
         p {
             display: none;
@@ -20,15 +25,22 @@ header{
     nav{
         @extend .flex-group;
         flex-direction: column;
-        gap: $offset-large;
+        // gap: $offset-large;
         align-items: center;
     }
 }
+.logo-container{
+    justify-content: center;
+    padding: 40px 0;
+}
+.header-link{
+    text-align: center;
+    padding-bottom: $offset-large;
+}
 .header-link__button{
+    @extend .header-link;
     background-color: $clr-primary;
     color: $clr-neutral;
-    text-align: center;
-    display: inline-flex;
     height: 10vh;
     width: 100%;
     line-height: 10vh;
@@ -36,7 +48,6 @@ header{
     padding: 0 $offset-large;
     transition: .6s;
     &:hover{
-        
         color: darken($clr-neutral, 5);
         background-color: darken($clr-primary, 5);
     }
@@ -44,9 +55,6 @@ header{
 .menu{
     display: none;
 }
-
-
-// Burger menu
 .burger-menu {
     padding: $offset-medieum;
     display: inline-block;
@@ -59,18 +67,68 @@ header{
     margin: 6px 0;
     transition: .3s;
 }
-  /* Rotate first bar */
 .toggle-menu .burger-menu__bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
-    
-  }
-  /* Fade out the second bar */
+}
 .toggle-menu .burger-menu__bar2 {
     opacity: 0;
-  }
-  /* Rotate last bar */
+}
 .toggle-menu .burger-menu__bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }   
+
+// Mediaqueries
+
+// Phone
+@media only screen and (min-width: 576px){
+}
+// Tablet
+@media only screen and (min-width: 768px){
+    header{
+        a{
+            font-size: $font-size-200;
+        }
+        nav{
+            flex-direction: row;
+            margin-left: auto;
+            gap: $offset-large;
+        }
+    }
+    .logo-container{
+        justify-content: unset;
+        padding: 0;
+    }
+    .header-link{
+        padding: unset;
+    }
+    .header-link__button{
+        padding: 0 $offset-large;
+        width: unset;
+    }
+    .menu{
+        display: flex;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+// Laptop
+@media only screen and (min-width: 992px){
+    header{
+        a{
+            p{
+                display: block;
+            }
+        }
+    }
+}
+// Large devices
+@media only screen and (min-width: 1200px){
+    header{
+        a{
+            font-size: $font-size-400;
+        }
+    }
+}

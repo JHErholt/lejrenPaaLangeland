@@ -1,16 +1,85 @@
 // Main
 main{
     margin-top: 10vh;
-    padding: $offset-large;
+    font-size: $font-size-200;
+    padding: $offset-small;
+    section{
+        @extend .center;
+        padding: $offset-large 0;
+        width: 90%;
+    }
+    h1{
+        text-align: center;
+        font-size: $font-size-600;
+        padding-bottom: $offset-large;
+    }
+    p{
+        @extend .center;
+        font-size: $font-size-100;
+        width: 75%;
+    }
 }
+.banner-container{
+    @extend .center;
+    padding: $offset-large 0;
+    width: 80% ;
 
+    
+}
+.grid-2{
+    img{
+        width: 50%;
+    }
+}
+.grid-3{
+    img{
+        width: 33%;
+    }
+}
+.small-img{
+    width: 100% !important;
+}
+.large-img{
+    display: none;
+}
 // Mediaqueries
 
 // Phone
 @media only screen and (min-width: 576px){
 }
 // Tablet
-@media only screen and (min-width: 768px){   
+@media only screen and (min-width: 768px){
+    main{
+        font-size: $font-size-200;
+        padding: $offset-large;
+        section{
+            @extend .center;
+            padding: $offset-large 0;
+            width: 80%;
+        }
+        div{
+            padding: $offset-large;
+        }
+        h1{
+            text-align: unset;
+            font-size: $font-size-600;
+            padding-bottom: $offset-large;
+        }
+        p{
+            @extend .center;
+            font-size: $font-size-200;
+            width: 75%;
+        }
+    }
+    .banner-container{
+        width: 100%;
+    }
+    .small-img{
+        display: none;
+    }
+    .large-img{
+        display: block;
+    }
 }
 // Laptop
 @media only screen and (min-width: 992px){

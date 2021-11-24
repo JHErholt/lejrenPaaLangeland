@@ -8,6 +8,9 @@ main{
         padding: $offset-large 0;
         width: 90%;
     }
+    div{
+        padding: $offset-medieum;
+    }
     h1{
         text-align: center;
         font-size: $font-size-600;

@@ -1,3 +1,21 @@
+table {
+    @extend .center;
+    border-collapse: collapse;
+    width: 80%;
+}
+  td, th {
+    border: 1px solid darken($clr-neutral, 20);
+    text-align: left;
+    padding: 8px;
+    width: 50%;
+    &:nth-child(2){
+        display: none;
+    }
+}
+tr:nth-child(even) {
+    background-color: darken($clr-neutral, 5);
+  }
+
 
 hr{
     height: 5px;
@@ -28,6 +46,12 @@ hr{
 }
 // Tablet
 @media only screen and (min-width: 768px){   
+    td, th{
+        width: 33%;
+        &:nth-child(2){
+            display: table-cell;
+        }
+    }
 }
 // Laptop
 @media only screen and (min-width: 992px){

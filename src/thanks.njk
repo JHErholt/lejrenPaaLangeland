@@ -11,4 +11,41 @@ layout: 'base.njk'
             virksomhedssponsorer og donationer fra fonde.
         </p>
     </div>
+    <div>
+    <table>
+        <tr>
+            <th>Navn</th>
+            <th>Sponsorat type</th>
+            <th>Beløb</th>
+        </tr>
+    </table>
+    </div>
 </section>
+<script>
+    console.log('123')
+    fetch("../json/sponsors.json")
+        .then(res => res.json())
+        .then(data => {
+
+           
+            let table = document.querySelector('table');
+
+            Object.entries(data).forEach(sponsor => {
+
+                sponsor = sponsor[1];
+
+              //  console.log(sponsor);
+
+                let row = table.insertRow();
+
+                Object.entries(sponsor).forEach(test => {
+
+                    let cell = row.insertCell();
+                    let columnValue = test[1];
+                    let columnName = test[0];
+
+                    cell.innerHTML = columnValue + (columnName === 'amount' ? ' kr' : '');
+                })
+            })
+        })
+</script>

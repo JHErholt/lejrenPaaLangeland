@@ -33,6 +33,9 @@ header{
 .logo-container{
     justify-content: center;
     padding: 40px 0;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 .header-link{
     text-align: center;

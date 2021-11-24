@@ -9,6 +9,8 @@ function toggleMenuIcon(x) {
 // Page Finder
 switch (window.location.pathname) {
     case ('/'):
+    document.querySelector('a[href="/"] p').style.textDecoration = "underline"
+    // document.querySelector('a[href="/"]').style.textDecoration = "underline"
     break;
     case ('/about/'):
     document.querySelector('a[href="/about"]').style.color = '#d0000b';

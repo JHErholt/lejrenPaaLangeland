@@ -1,3 +1,7 @@
+.offset{
+    padding: $offset-medieum;
+}
+
 table {
     @extend .center;
     border-collapse: collapse;
@@ -14,7 +18,21 @@ table {
 }
 tr:nth-child(even) {
     background-color: darken($clr-neutral, 5);
-  }
+}
+
+details{
+    color: $clr-neutral;
+    background-color:   $clr-primary;
+    summary{
+        padding: $offset-medieum;
+        font-size: $font-size-400;
+    }
+}
+details:nth-child(even) {
+    background-color: darken($clr-primary, 5);
+}
+
+
 
 
 hr{
@@ -45,7 +63,10 @@ hr{
 @media only screen and (min-width: 576px){
 }
 // Tablet
-@media only screen and (min-width: 768px){   
+@media only screen and (min-width: 768px){
+    .offset{
+        padding: $offset-large;
+    }
     td, th{
         width: 33%;
         &:nth-child(2){

@@ -27,5 +27,6 @@ let d = new Date();
 let y = d.getFullYear();
 let copyrightContainer = document.getElementById('copyright');
 let copyrightText = document.createElement('p');
-copyrightText.innerHTML = '&#169; ' + y + ' Jacob Erholt';
+// Changed copyright text to 2021, to show the year i've created the site
+copyrightText.innerHTML = '&#169; ' + 2021 + ' Jacob Erholt';
 copyrightContainer.appendChild(copyrightText);
